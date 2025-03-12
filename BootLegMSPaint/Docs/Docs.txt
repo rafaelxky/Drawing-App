@@ -1,0 +1,48 @@
+SGL
+import org.academiadecodigo.simplegraphics.graphics.Color;
+import org.academiadecodigo.simplegraphics.graphics.Ellipse;
+import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
+import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
+
+Keyboard:
+implements KeyboardHandler
+
+ex: elipse
+rectArray1[i] = new Ellipse(50 * i / 2, 50 / 2, 50, 50);
+            rectArray1[i].draw();
+            rectArray1[i].setColor(Color.BLUE);
+            rectArray1[i].fill();
+
+// requires keyboard to be instantiated
+                    this.keyboard = new Keyboard(this);
+
+                    // starting a keyboard event
+                    KeyboardEvent keyboardEventRightRelease = new KeyboardEvent();
+                            keyboardEventRightRelease.setKey(KeyboardEvent.KEY_RIGHT);
+                            keyboardEventRightRelease.setKeyboardEventType(KeyboardEventType.KEY_RELEASED);
+                            keyboard.addEventListener(keyboardEventRightRelease);
+
+                            // getting keyboard event
+                            public void Move2Case(KeyboardEvent keyboardEvent){
+
+                            }
+
+                            // obligatory implemnents
+                            @Override
+                                public void keyPressed(KeyboardEvent keyboardEvent) {
+                                    Move1Case(keyboardEvent);
+                                    Move2Case(keyboardEvent);
+                                    move();
+                                }
+
+                                @Override
+                                public void keyReleased(KeyboardEvent keyboardEvent) {
+                                    Stop1Case(keyboardEvent);
+                                    Stop2Case(keyboardEvent);
+
+                                }
+
